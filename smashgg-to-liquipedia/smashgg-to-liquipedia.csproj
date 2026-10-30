@@ -3,7 +3,7 @@
     <ProjectGuid>{09CFBF0E-D285-461E-9FE5-549C314A84E3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>smashgg_to_liquipedia</RootNamespace>
-    <TargetFramework>net461</TargetFramework>
+    <TargetFramework>net462</TargetFramework>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
