@@ -27,12 +27,14 @@
     <Deterministic>false</Deterministic>
     <AssemblyVersion>4.3.*</AssemblyVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
+    <!-- If SolutionDir is empty, default it to the parent directory of this project -->
+    <SolutionDir Condition="'$(SolutionDir)' == '' or '$(SolutionDir)' == '*Undefined*'">$(MSBuildProjectDirectory)\..\</SolutionDir>
     <PreBuildEvent>XCOPY "$(SolutionDir)smashgg-to-liquipedia\Character Lists" "$(TargetDir)Character Lists" /s /i /y
 XCOPY "$(SolutionDir)smashgg-to-liquipedia\Stage Lists" "$(TargetDir)Stage Lists" /s /i /y</PreBuildEvent>
     <PostBuildEvent />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugType>full</DebugType>
+    <DebugType>portable</DebugType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
